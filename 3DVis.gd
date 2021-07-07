@@ -1,16 +1,17 @@
 extends Spatial
 
+signal selection_changed
+
 var selection = null
 
-func _ready():
-	select_target(get_node("ProbeSphere"))
-
 func select_target(target):
-	get_node("../../../MapView").texture = target.get_node("Viewport").get_texture()
+	get_node("../../../MapView").texture = target.get_map()
+	if selection:
+		selection.hide_radius()
+	target.show_radius()
 	selection = target
-	get_node("Radius").global_transform.origin = target.global_transform.origin
-	get_node("Radius").mesh.radius = 0.1 + target.distance
-	get_node("Radius").mesh.height = 2.0 * get_node("Radius").mesh.radius
+
+	emit_signal("selection_changed")
 
 func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == 1:

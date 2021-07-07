@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/cup.obj-040d18ea52653d03f1cfe651172baa79.mesh"
+
+[deps]
+
+files=[ "res://.import/cup.obj-040d18ea52653d03f1cfe651172baa79.mesh" ]
+
+source_file="res://cup.obj"
+dest_files=[ "res://.import/cup.obj-040d18ea52653d03f1cfe651172baa79.mesh", "res://.import/cup.obj-040d18ea52653d03f1cfe651172baa79.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
